@@ -16,3 +16,9 @@ button {
 .custom-box-shadow {
     box-shadow: 6px 6px 0px 0px black;
 }
+
+.panel {
+    background-image: url('/grid_pattern.png');
+    background-repeat: repeat;
+    background-size: 15px;
+}

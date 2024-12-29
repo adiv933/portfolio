@@ -20,7 +20,7 @@ const Navbar = () => {
 
 
     return (
-        <div className="fixed top-4 left-1/2 transform -translate-x-1/2 w-[96%] bg-white shadow-lg border-black border-[3px] rounded-lg flex justify-between items-center px-4 py-2">
+        <div className="fixed top-4 left-1/2 z-40 transform -translate-x-1/2 w-[96%] bg-white shadow-lg border-black border-[3px] rounded-lg flex justify-between items-center px-4 py-2">
             <div className="font-bold text-3xl text-black leading-6 tracking-tighter hover:tracking-wide duration-200 cursor-pointer" onClick={() => navigate('/')}>AV</div>
 
             <div className="text-black text-md">

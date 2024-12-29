@@ -26,7 +26,7 @@ const CustomCursor = () => {
                 }}
             /> */}
             <div
-                className="pointer fixed top-3 left-3 w-4 h-4 rounded-full mix-blend-difference bg-white pointer-events-none transition-all duration-100 ease-[cubic-bezier(0.19, 1, 0.22, 1)]"
+                className="pointer fixed top-3 left-3 w-4 h-4 rounded-full mix-blend-difference z-50 bg-white pointer-events-none transition-all duration-100 ease-[cubic-bezier(0.19, 1, 0.22, 1)]"
                 style={{
                     transform: `translate(${position.x - 12}px, ${position.y - 12}px)`,
                 }}>
