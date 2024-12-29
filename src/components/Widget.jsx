@@ -12,31 +12,31 @@ const Widget = ({ className }) => {
             {/* Top Section: Image and Time */}
             <div className="px-4 py-6 flex flex-col items-center">
                 <img
-                    src="https://via.placeholder.com/150"
-                    alt="Placeholder"
-                    className="w-24 h-24 rounded-2xl border-[3px] border-black mb-2"
+                    src="/pc.png"
+                    alt="pc"
+                    className="w-24 h-24 rounded-2xl border-[3px] border-black mb-2 contrast-125 grayscale hover:grayscale-0 hover:contrast-100"
                 />
                 <div className="text-2xl font-semibold text-gray-700">{dateTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</div>
             </div>
 
             {/* Middle Section: Stats */}
             <div className="px-3 py-4 bg-gray-300 mx-6 rounded-lg border-[3px] border-black">
-                <div className="flex justify-between items-center mt-4 gap-x-2">
+                <div className="flex justify-between items-center mt-4 gap-x-2 hover:translate-y-[-2px] duration-100 transition">
                     <div className="text-sm text-gray-600 font-semibold ">cpu</div>
-                    <div className="h-4 w-52 bg-gray-200 rounded-full border-2 border-black">
-                        <div className="h-full bg-gray-500" style={{ width: "50%" }}></div>
+                    <div className="h-4 w-52 bg-gray-200 rounded-full border-2 border-black ">
+                        <div className="h-full bg-gray-500 hover:bg-emerald-300 duration-100" style={{ width: "50%" }}></div>
                     </div>
                 </div>
-                <div className="flex justify-between items-center mt-4 gap-x-2">
+                <div className="flex justify-between items-center mt-4 gap-x-2 hover:translate-y-[-2px] duration-100 transition">
                     <div className="text-sm text-gray-600 font-semibold ">mem</div>
-                    <div className="h-4 w-52 bg-gray-200 rounded-full border-2 border-black">
-                        <div className="h-full bg-gray-500" style={{ width: "70%" }}></div>
+                    <div className="h-4 w-52 bg-gray-200 rounded-full border-2 border-black ">
+                        <div className="h-full bg-gray-500 hover:bg-blue-300 duration-100" style={{ width: "70%" }}></div>
                     </div>
                 </div>
-                <div className="flex justify-between items-center mt-4 gap-x-2">
+                <div className="flex justify-between items-center mt-4 gap-x-2 hover:translate-y-[-2px] duration-100 transition">
                     <div className="text-sm text-gray-600 font-semibold ">sleep</div>
-                    <div className="h-4 w-52 bg-gray-200 rounded-full border-2 border-black">
-                        <div className="h-full bg-red-500" style={{ width: "20%" }}></div>
+                    <div className="h-4 w-52 bg-gray-200 rounded-full border-2 border-black ">
+                        <div className="h-full bg-gray-500 hover:bg-red-500 duration-100" style={{ width: "20%" }}></div>
                     </div>
                 </div>
             </div>
@@ -52,20 +52,18 @@ const MusicPlayer = () => {
     const [isPrevHovered, setIsPrevHovered] = useState(false);
 
     return (
-        <div className="w-full flex items-center p-4 rounded-lg shadow-lg justify-around ">
+        <div className="w-full flex items-center py-6  rounded-lg shadow-lg justify-evenly ">
             {/* Song Image */}
-            <div className="flex items-center">
-                <img
-                    src="https://via.placeholder.com/100"
-                    alt="Song"
-                    className="w-20 h-20 rounded-lg"
-                />
-            </div>
+            <img
+                src="/flawed_mangoes.jpg"
+                alt="flawed_mangoes"
+                className="w-20 h-20 rounded-lg hover:scale-110 duration-200"
+            />
 
             {/* Song Info and Controls */}
-            <div className="flex flex-col items-start justify-between ml-2">
+            <div className="flex flex-col items-start justify-between">
                 {/* Song Title */}
-                <div className="text-lg font-semibold self-center">Song Title</div>
+                <div className="text-lg font-semibold self-center">The Beginning</div>
 
                 {/* Media Controls */}
                 <div className="flex items-center space-x-4">
@@ -103,7 +101,7 @@ const MusicPlayer = () => {
                     </button>
 
                     {/* Play/Pause Button */}
-                    <button className="p-2 hover:scale-110 transition duration-200">
+                    <button className="p-2 hover:scale-110 duration-200">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 24 24"

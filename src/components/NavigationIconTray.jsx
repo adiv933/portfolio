@@ -38,10 +38,15 @@ export default function NavigationIconTray({ setWallpaper }) {
                             `${iconClass} ${isActive ? "opacity-30" : "opacity-100"}`
                         }
                     >
-                        <div className="flex flex-col items-center space-y-1 hover:scale-110 transition duration-200">
-                            <img className="w-12 h-12" src={link.icon} alt={link.name} />
-                            <span className="text-sm font-semibold">{link.name}</span>
-                        </div>
+                        {({ isActive }) => (
+                            <div
+                                className={`flex flex-col items-center space-y-1 transition duration-200 ${isActive ? "" : "hover:scale-110"
+                                    }`}
+                            >
+                                <img className="w-12 h-12" src={link.icon} alt={link.name} />
+                                <span className="text-sm font-semibold">{link.name}</span>
+                            </div>
+                        )}
                     </NavLink>
                 ))}
             </div>
@@ -50,7 +55,7 @@ export default function NavigationIconTray({ setWallpaper }) {
             <div>
                 <button
                     className={iconClass}
-                    onClick={setWallpaper} 
+                    onClick={setWallpaper}
                 >
                     <div className="flex flex-col items-center space-y-1 hover:scale-110 transition duration-200">
                         <img className="w-12 h-12" src="/change.png" alt="Change wallpaper" />
