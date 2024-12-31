@@ -8,64 +8,45 @@ const Projects = () => {
                 <h1 className="text-[4rem] font-bold mb-2 tracking-tighter">Projects</h1>
                 <p className="text-xl">beep beep boop bop</p>
             </div>
-            <div className="h-[75%] mt-48 ml-8 mr-36 mb-4 p-8 border-[3px] border-black rounded-lg panel relative z-20 flex items-center gap-x-12 overflow-hidden custom-box-shadow">
-                <WindowCard title="hello world!">
-                    <MacSVG />
-                    <p className="text-gray-700 tracking-tight">
-                        <b>Hi, I'm Aditya</b><br /><br />
-                        A full-stack developer and tech enthusiast. Let's collaborate and bring ideas to life!
-                    </p>
-                    <button className="custom-box-shadow border-4 border-black w-full p-2 mt-4 hover:bg-black hover:text-white font-bold flex justify-center items-center gap-x-2">
-                        click to download resume
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-5">
-                            <path fillRule="evenodd" d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z" clipRule="evenodd" />
-                        </svg>
+            <div className="h-[85vh] mt-48 ml-8 mr-36 mb-4 p-8 border-[3px] border-black rounded-lg panel relative z-20 flex items-center gap-x-12 overflow-x-auto   custom-box-shadow">
+                {Array.from({ length: 8 }).map((_, index) => (
+                    <WindowCard title={`project#${index + 1}`} key={index} width="4xl">
+                        <div className="sticky top-32 ml-28 header z-10 flex" >
+                            <h1 className="text-[4rem] font-bold mb-2 tracking-tighter">Projects</h1>
+                            <p className="text-xl">beep beep boop bop</p>
 
-                    </button>
-
-                </WindowCard>
-                <WindowCard title="hello world!">
-                    <MacSVG />
-                    <p className="text-gray-700 tracking-tight">
-                        <b>Hi, I'm Aditya</b><br /><br />
-                        A full-stack developer and tech enthusiast. Let's collaborate and bring ideas to life!
-                    </p>
-                    <button className="custom-box-shadow border-4 border-black w-full p-2 mt-4 hover:bg-black hover:text-white font-bold flex justify-center items-center gap-x-2">
-                        click to download resume
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-5">
-                            <path fillRule="evenodd" d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z" clipRule="evenodd" />
-                        </svg>
-
-                    </button>
-                </WindowCard>
-                <WindowCard title="hello world!">
-                    <MacSVG />
-                    <p className="text-gray-700 tracking-tight">
-                        <b>Hi, I'm Aditya</b><br /><br />
-                        A full-stack developer and tech enthusiast. Let's collaborate and bring ideas to life!
-                    </p>
-                    <button className="custom-box-shadow border-4 border-black w-full p-2 mt-4 hover:bg-black hover:text-white font-bold flex justify-center items-center gap-x-2">
-                        click to download resume
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-5">
-                            <path fillRule="evenodd" d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z" clipRule="evenodd" />
-                        </svg>
-
-                    </button>
-                </WindowCard>
-                <WindowCard title="hello world!">
-                    <MacSVG />
-                    <p className="text-gray-700 tracking-tight">
-                        <b>Hi, I'm Aditya</b><br /><br />
-                        A full-stack developer and tech enthusiast. Let's collaborate and bring ideas to life!
-                    </p>
-                    <button className="custom-box-shadow border-4 border-black w-full p-2 mt-4 hover:bg-black hover:text-white font-bold flex justify-center items-center gap-x-2">
-                        click to download resume
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-5">
-                            <path fillRule="evenodd" d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z" clipRule="evenodd" />
-                        </svg>
-
-                    </button>
-                </WindowCard>
+                            <h1 className="text-[4rem] font-bold mb-2 tracking-tighter">Projects</h1>
+                            <p className="text-xl">beep beep boop bop</p>
+                        </div>
+                        <div className="sticky top-32 ml-28 header z-10 flex" >
+                            <h1 className="text-[4rem] font-bold mb-2 tracking-tighter">Projects</h1>
+                            <p className="text-xl">beep beep boop bop</p>
+                            <h1 className="text-[4rem] font-bold mb-2 tracking-tighter">Projects</h1>
+                            <p className="text-xl">beep beep boop bop</p>
+                        </div>
+                        <div className="sticky top-32 ml-28 header z-10 flex" >
+                            <h1 className="text-[4rem] font-bold mb-2 tracking-tighter">Projects</h1>
+                            <p className="text-xl">beep beep boop bop</p>
+                            <h1 className="text-[4rem] font-bold mb-2 tracking-tighter">Projects</h1>
+                            <p className="text-xl">beep beep boop bop</p>
+                        </div>
+                        <div className="sticky top-32 ml-28 header z-10 flex" >
+                            <h1 className="text-[4rem] font-bold mb-2 tracking-tighter">Projects</h1>
+                            <p className="text-xl">beep beep boop bop</p>
+                            <h1 className="text-[4rem] font-bold mb-2 tracking-tighter">Projects</h1>
+                            <p className="text-xl">beep beep boop bop</p>
+                        </div>
+                        <div className="sticky top-32 ml-28 header z-10 flex" >
+                            <p className="text-xl">beep beep boop bop</p>
+                            <p className="text-xl">beep beep boop bop</p>
+                            <h1 className="text-[4rem] font-bold mb-2 tracking-tighter">Projects</h1>
+                            <h1 className="text-[4rem] font-bold mb-2 tracking-tighter">Projects</h1>
+                            <p className="text-xl">beep beep boop bop</p>
+                            <p className="text-xl">beep beep boop bop</p>
+                            <p className="text-xl">beep beep boop bop</p>
+                        </div>
+                    </WindowCard>
+                ))}
             </div>
         </div>
     );
