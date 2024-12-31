@@ -24,7 +24,7 @@ const Navbar = () => {
             <div className="font-bold text-3xl text-black leading-6 tracking-tighter hover:tracking-wide duration-200 cursor-pointer" onClick={() => navigate('/')}>AV</div>
 
             <div className="text-black text-md">
-                /user/aditya
+                /usr/aditya
                 {location.pathname === "/" ? "/home" : location.pathname}
             </div>
 

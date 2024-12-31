@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 
 export default function NavigationIconTray({ setWallpaper }) {
-    const iconClass = "cursor-pointer transition-opacity duration-200";
+    const iconClass = "cursor-pointer transition-";
 
     const navLinks = [
         {
@@ -40,7 +40,7 @@ export default function NavigationIconTray({ setWallpaper }) {
                     >
                         {({ isActive }) => (
                             <div
-                                className={`flex flex-col items-center space-y-1 transition duration-200 ${isActive ? "" : "hover:scale-110"
+                                className={`flex flex-col items-center space-y-1  ${isActive ? "" : "hover:scale-110"
                                     }`}
                             >
                                 <img className="w-12 h-12" src={link.icon} alt={link.name} />
@@ -57,7 +57,7 @@ export default function NavigationIconTray({ setWallpaper }) {
                     className={iconClass}
                     onClick={setWallpaper}
                 >
-                    <div className="flex flex-col items-center space-y-1 hover:scale-110 transition duration-200">
+                    <div className="flex flex-col items-center space-y-1 hover:scale-110 ">
                         <img className="w-12 h-12" src="/change.png" alt="Change wallpaper" />
                         <span className="text-sm font-semibold">change wallpaper</span>
                     </div>
@@ -66,3 +66,4 @@ export default function NavigationIconTray({ setWallpaper }) {
         </div>
     );
 }
+

@@ -8,10 +8,10 @@ body {
     /* cursor: none; */
 }
 
-a,
+/* a,
 button {
-    /* cursor: none; */
-}
+    cursor: none;
+} */
 
 .custom-box-shadow {
     box-shadow: 6px 6px 0px 0px black;

@@ -11,7 +11,7 @@ const WindowCard = ({ title, children, className }) => {
                 <h3 className="text-lg font-semibold text-gray-700">{title}</h3>
                 <div></div>
             </div>
-            <div className="p-4">{children}</div>
+            <div className="px-6 py-4">{children}</div>
         </div>
     );
 };
