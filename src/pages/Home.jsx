@@ -33,13 +33,13 @@ import MacSVG from "../../public/MacSVG";
 
 const Home = () => {
     return (
-        <div className="min-h-screen flex items-center justify-evenly relative">
+        <div className="min-h-screen flex items-center justify-evenly">
             <Widget className="fixed left-8 top-20" />
             <Draggable
                 bounds="parent"
             >
                 <div className="absolute">
-                    <WindowCard title="hello world!">
+                    <WindowCard title="hello world!" className="px-6 py-4" width="md">
                         <MacSVG />
                         <p className="text-gray-700 tracking-tight text-justify">
                             <b>Hi, I'm Aditya</b>

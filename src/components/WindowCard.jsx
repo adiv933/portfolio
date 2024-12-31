@@ -1,7 +1,7 @@
-const WindowCard = ({ title, children, className }) => {
+const WindowCard = ({ title, children, className, width, height }) => {
     return (
         <div
-            className={`max-w-md bg-white rounded-lg border-black border-[3px] custom-box-shadow ${className}`}
+            className={`max-w-${width} max-h-${height} bg-white rounded-lg border-black border-[3px] custom-box-shadow`}
         >
             <div className="flex items-center justify-between px-4 py-2 bg-gray-300p border-b-[3px] border-black rounded-t-lg">
                 <div className="flex items-center space-x-2">
@@ -11,7 +11,7 @@ const WindowCard = ({ title, children, className }) => {
                 <h3 className="text-lg font-semibold text-gray-700">{title}</h3>
                 <div></div>
             </div>
-            <div className="px-6 py-4">{children}</div>
+            <div className={className}>{children}</div>
         </div>
     );
 };
