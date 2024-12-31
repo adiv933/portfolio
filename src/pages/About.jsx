@@ -4,25 +4,24 @@ import WindowCard from "../components/WindowCard";
 const About = () => {
 
     const skills = [
-        { name: "git", image: "/skills/git" },
-        { name: "github", image: "/skills/github" },
-        { name: "mongodb", image: "/skills/mongodb" },
-        { name: "sql plus", image: "/skills/sql_plus" },
-        { name: "express", image: "/skills/express" },
-        { name: "nodejs", image: "/skills/nodejs" },
-        { name: "reactjs", image: "/skills/reactjs" },
-        { name: "nextjs", image: "/skills/nextjs" },
-        { name: "html", image: "/skills/html" },
-        { name: "css", image: "/skills/css" },
-        { name: "ejs", image: "/skills/ejs" },
-        { name: "tailwind", image: "/skills/tailwind" },
-        { name: "bootstrap", image: "/skills/bootstrap" },
-        { name: "java", image: "/skills/java" },
-        { name: "c++", image: "/skills/cpp" },
-        { name: "c", image: "/skills/c" },
-        { name: "javascript", image: "/skills/javascript" },
-        { name: "o.o.p.s", image: "/skills/oops" },
-        { name: "data structures", image: "/skills/dsa" },
+        { name: "git", image: "/skills/git.png" },
+        { name: "github", image: "/skills/github.png" },
+        { name: "mongodb", image: "/skills/mongodb.png" },
+        { name: "sql", image: "/skills/sql.png" },
+        { name: "express", image: "/skills/express.png" },
+        { name: "nodejs", image: "/skills/nodejs.png" },
+        { name: "reactjs", image: "/skills/reactjs.png" },
+        { name: "nextjs", image: "/skills/nextjs.png" },
+        { name: "html", image: "/skills/html.png" },
+        { name: "css", image: "/skills/css.png" },
+        { name: "ejs", image: "/skills/ejs.png" },
+        { name: "tailwind", image: "/skills/tailwind.png" },
+        { name: "bootstrap", image: "/skills/bootstrap.png" },
+        { name: "java", image: "/skills/java.png" },
+        { name: "c++", image: "/skills/cpp.png" },
+        { name: "c", image: "/skills/c.png" },
+        { name: "javascript", image: "/skills/js.png" },
+        { name: "typescript", image: "/skills/ts.png" },
     ];
 
     return (
@@ -32,7 +31,7 @@ const About = () => {
             >
                 <div className="absolute right-44 top-24">
 
-                    <WindowCard title="/usr/aditya/skill" width="xl">
+                    <WindowCard title="/usr/aditya/experience" width="xl">
                         <div className="flex flex-col h-[36rem]">
                             <div className="flex items-center gap-x-6 bg-gray-300 border-b-[3px] border-black pl-4 ">
                                 <span className="hover:font-semibold">File</span>
@@ -81,6 +80,12 @@ const About = () => {
                                         creating a new defense mechanism for the game from scratch.
                                     </li>
                                 </ul>
+                                <h4 className="text-xl font-semibold underline mt-8 mb-4">Education</h4>
+                                <ul className="space-y-4 text-md">
+                                    <li>
+                                        <strong>Manipal Institute of Technology, Manipal Karnataka</strong><br />B. Tech Information Technology - 2026</li>
+
+                                </ul>
                             </div>
                         </div>
 
@@ -89,6 +94,7 @@ const About = () => {
                 </div>
 
             </Draggable>
+
             <Draggable
                 bounds="parent"
             >
@@ -109,15 +115,15 @@ const About = () => {
                             <div className="w-3/4 p-4">
                                 <div className="grid grid-cols-4 gap-4">
                                     {skills.map((skill, index) => (
-                                        <div key={index} className="flex flex-col items-center">
-                                            <div className="w-16 h-16 bg-gray-200 border-[2px] border-black flex items-center justify-center">
+                                        <div key={index} className="flex flex-col items-center hover:scale-105">
+                                            <div className="w-16 h-16 bg-gray-200 border-[3px] border-black rounded-lg flex items-center justify-center">
                                                 <img
                                                     src={skill.image}
                                                     alt={skill.name}
-                                                    className="max-w-full max-h-full"
+                                                    className="max-w-full max-h-full grayscale contrast-125 "
                                                 />
                                             </div>
-                                            <p className="text-sm text-center">{skill.name}</p>
+                                            <p className="text-md font-semibold text-center">{skill.name}</p>
                                         </div>
                                     ))}
                                 </div>
