@@ -1,11 +1,13 @@
 import Draggable from "react-draggable";
 import WindowCard from "../components/WindowCard";
 import { useEffect, useRef, useState } from "react";
+import useDraggable from "../hooks/useDraggable";
 
 const About = () => {
 
     const [showArrow, setShowArrow] = useState(true);
     const scrollableDivRef = useRef(null);
+    const { isDragging, handleStart, handleStop } = useDraggable();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -53,71 +55,14 @@ const About = () => {
         <div className="min-h-screen">
             <Draggable
                 bounds="parent"
+                onStart={handleStart}
+                onStop={handleStop}
             >
-                <div className="absolute right-44 top-24">
+                <div className={`absolute right-44 top-24 ${isDragging
+                    ? "cursor-grabbing"
+                    : "cursor-grab"
+                    }`}>
 
-                    {/* <WindowCard title="/usr/aditya/about/experience.txt" width="2xl">
-                        <div className="flex flex-col h-[36rem] tracking-tight">
-                            <div className="flex items-center gap-x-6 bg-gray-300 border-b-[3px] border-black pl-4 ">
-                                <span className="hover:font-semibold">File</span>
-                                <span className="hover:font-semibold">View</span>
-                                <span className="hover:font-semibold">Text</span>
-                            </div>
-
-                            <div className="flex-1 overflow-y-auto p-3 bg-white">
-                                <h4 className="text-xl font-semibold underline mb-4">Work Experience</h4>
-                                <ul className="space-y-4 text-md">
-                                    <li>
-                                        <strong>Intern - MakeItAiFor.Me, Remote</strong> (May 2024 – August 2024)
-                                        <br />
-                                        Full stack developer. Tech stack: ReactJS, NextJS, NestJS, Tailwind CSS
-                                    </li>
-                                    <li>
-                                        <strong>Dev Head - IECSE Manipal, Manipal</strong> (August 2024 – Present)
-                                        <br />
-                                        The official Computer Science Club of Manipal
-                                    </li>
-                                    <li>
-                                        <strong>Organizing Committee - Revels’24 fest, Manipal</strong> (January 2024 – March 2024)
-                                        <br />
-                                        System Admin and WebDev, Manipal
-                                    </li>
-                                    <li>
-                                        <strong>Freelance Fullstack Developer</strong> (May 2024 – Present)
-                                        <br />
-                                        Working with multiple clients under tight deadlines
-                                    </li>
-                                </ul>
-
-                                <h4 className="text-xl font-semibold underline mt-8 mb-4">Experiences</h4>
-                                <ul className="space-y-4 text-md">
-                                    <li>
-                                        <strong>AppLab HackXhibit’23</strong>: A 36-hour hackathon, creating an Android app to aid in finding lost items.{" "}
-                                    </li>
-                                    <li>
-                                        <strong>OpenCode’23</strong>: Contributed to a month-long open-source challenge organised by IIIT Allahabad.{" "}
-                                    </li>
-                                    <li>
-                                        <strong>DevSprint 2024</strong>: Participated in this hackathon creating a team collaboration platform – TopFlow.
-                                    </li>
-                                    <li>
-                                        Worked on the frontend and the server of <strong>Order of Chaos</strong> - a coding + fast typing multiplayer event
-                                        creating a new defense mechanism for the game from scratch.
-                                    </li>
-                                </ul>
-                                <h4 className="text-xl font-semibold underline mt-8 mb-4">Education</h4>
-                                <ul className="space-y-4 text-md">
-                                    <li>
-                                        <strong>Manipal Institute of Technology, Manipal Karnataka</strong><br />B. Tech Information Technology - 2026
-                                        <span className="blinking-cursor">|</span>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </div>
-
-
-                    </WindowCard> */}
                     <WindowCard title="/usr/aditya/about/experience.txt" width="2xl">
                         <div className="flex flex-col h-[36rem] tracking-tight relative">
                             {/* Top bar */}
@@ -204,12 +149,17 @@ const About = () => {
 
                 </div>
 
-            </Draggable>
+            </Draggable >
 
             <Draggable
                 bounds="parent"
+                onStart={handleStart}
+                onStop={handleStop}
             >
-                <div className="absolute left-24 top-48 ">
+                <div className={`absolute left-24 top-48 ${isDragging
+                    ? "cursor-grabbing"
+                    : "cursor-grab"
+                    }`}>
                     <WindowCard title="/usr/aditya/about/skills" width="lg">
                         <div className="flex h-full tracking-tight">
                             <div className="w-1/4 border-r-[3px] border-black p-1 pt-4 bg-gray-100">
@@ -245,7 +195,7 @@ const About = () => {
                 </div>
 
             </Draggable>
-        </div>
+        </div >
     );
 };
 

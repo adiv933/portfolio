@@ -8,5 +8,5 @@ export default function useDraggable() {
     const handleStop = () => {
         setIsDragging(false);
     };
-    return isDragging;
+    return { isDragging, handleStart, handleStop };
 }

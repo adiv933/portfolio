@@ -25,7 +25,7 @@ const App = () => {
         </Routes>
       </div>
       <NavigationIconTray setWallpaper={setWallpaper} />
-      <CustomCursor />
+      {/* <CustomCursor /> */}
     </div >
   );
 };

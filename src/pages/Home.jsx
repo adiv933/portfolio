@@ -6,15 +6,15 @@ import useDraggable from "../hooks/useDraggable";
 
 const Home = () => {
 
-    const isDragging = useDraggable();
+    const { isDragging, handleStart, handleStop } = useDraggable();
 
     return (
         <div className="min-h-screen flex items-center justify-evenly">
             <Widget className="fixed left-8 top-20" />
             <Draggable
                 bounds="parent"
-                // onStart={handleStart}
-                // onStop={handleStop}
+                onStart={handleStart}
+                onStop={handleStop}
             >
                 <div className={`absolute ${isDragging
                     ? "cursor-grabbing"

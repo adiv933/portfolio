@@ -5,7 +5,6 @@ const Contact = () => {
         <div className="min-h-screen flex items-center justify-center">
             <WindowCard title="/usr/aditya/contact">
                 <div className="p-4">
-                    {/* <p className="mb-4 text-center">Get in touch through any of the platforms below:</p> */}
                     <ul className="list-none space-y-4 text-sm">
                         <li className="flex items-center gap-4 contrast-125 grayscale hover:grayscale-0 hover:contrast-100 hover:translate-y-[-2px]">
                             <img
