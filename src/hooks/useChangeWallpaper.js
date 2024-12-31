@@ -11,7 +11,7 @@ const wallpapers = [
 ];
 
 
-const useChangeWallpaper = () => {
+export default function useChangeWallpaper() {
     const [wallpaperIndex, setWallpaperIndex] = useState(0);
     function setWallpaper() {
         setWallpaperIndex((prevIndex) => (prevIndex + 1) % wallpapers.length);
@@ -19,4 +19,3 @@ const useChangeWallpaper = () => {
     return [wallpapers[wallpaperIndex], setWallpaper];
 };
 
-export default useChangeWallpaper;

@@ -7,27 +7,27 @@ export default function NavigationIconTray({ setWallpaper }) {
         {
             name: "home",
             route: "/",
-            icon: "/home.png",
+            icon: "images/home.png",
         },
         {
             name: "projects",
             route: "/projects",
-            icon: "/projects.png",
+            icon: "images/projects.png",
         },
         {
             name: "about",
             route: "/about",
-            icon: "/about.png",
+            icon: "images/about.png",
         },
         {
             name: "contact",
             route: "/contact",
-            icon: "/contact.png",
+            icon: "images/contact.png",
         },
     ];
 
     return (
-        <div className="fixed right-6 top-24 h-[80%] w-20 flex flex-col justify-between items-center text-black">
+        <div className="fixed right-6 top-24 h-[85%] w-20 flex flex-col justify-between items-center text-black ">
             {/* Top Icons */}
             <div className="space-y-4 flex flex-col">
                 {navLinks.map((link) => (
@@ -43,7 +43,7 @@ export default function NavigationIconTray({ setWallpaper }) {
                                 className={`flex flex-col items-center space-y-1  ${isActive ? "" : "hover:scale-110"
                                     }`}
                             >
-                                <img className="w-12 h-12" src={link.icon} alt={link.name} />
+                                <img className="w-12 h-12 grayscale contrast-200" src={link.icon} alt={link.name} />
                                 <span className="text-sm font-semibold">{link.name}</span>
                             </div>
                         )}
@@ -58,7 +58,7 @@ export default function NavigationIconTray({ setWallpaper }) {
                     onClick={setWallpaper}
                 >
                     <div className="flex flex-col items-center space-y-1 hover:scale-110 ">
-                        <img className="w-12 h-12" src="/change.png" alt="Change wallpaper" />
+                        <img className="w-12 h-12 grayscale contrast-200" src="images/change.png" alt="Change wallpaper" />
                         <span className="text-sm font-semibold">change wallpaper</span>
                     </div>
                 </button>

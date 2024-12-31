@@ -213,13 +213,13 @@ const About = () => {
                     <WindowCard title="/usr/aditya/about/skills" width="lg">
                         <div className="flex h-full tracking-tight">
                             <div className="w-1/4 border-r-[3px] border-black p-1 pt-4 bg-gray-100">
-                                <h4 className="text-md font-semibold mb-4 tracking-tight">Quick Access</h4>
+                                <h4 className="text-md font-semibold mb-4  tracking-tight">quick access</h4>
                                 <ul className="space-y-2 text-sm">
-                                    <li className="cursor-pointer hover:font-semibold">Documents</li>
-                                    <li className="cursor-pointer hover:font-semibold">Pictures</li>
-                                    <li className="cursor-pointer hover:font-semibold">Music</li>
-                                    <li className="cursor-pointer hover:font-semibold">Videos</li>
-                                    <li className="cursor-pointer hover:font-semibold">Downloads</li>
+                                    <li className="cursor-pointer hover:font-semibold"><i class="ri-article-line"> </i>documents</li>
+                                    <li className="cursor-pointer hover:font-semibold"><i class="ri-gallery-line"> </i>pictures</li>
+                                    <li className="cursor-pointer hover:font-semibold"><i class="ri-music-2-line"> </i>music</li>
+                                    <li className="cursor-pointer font-semibold"><i class="ri-id-card-line"> </i>skills</li>
+                                    <li className="cursor-pointer hover:font-semibold"><i class="ri-folder-download-line"> </i>downloads</li>
                                 </ul>
                             </div>
 

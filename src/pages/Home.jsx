@@ -1,16 +1,25 @@
 import Draggable from "react-draggable";
 import WindowCard from "../components/WindowCard";
 import Widget from "../components/Widget";
-import MacSVG from "../../public/MacSVG";
+import MacSVG from "../../public/images/MacSVG";
+import useDraggable from "../hooks/useDraggable";
 
 const Home = () => {
+
+    const isDragging = useDraggable();
+
     return (
         <div className="min-h-screen flex items-center justify-evenly">
             <Widget className="fixed left-8 top-20" />
             <Draggable
                 bounds="parent"
+                // onStart={handleStart}
+                // onStop={handleStop}
             >
-                <div className="absolute">
+                <div className={`absolute ${isDragging
+                    ? "cursor-grabbing"
+                    : "cursor-grab"
+                    }`}>
                     <WindowCard title="hello world!" className="px-6 py-4" width="md">
                         <MacSVG />
                         <p className="text-gray-700 tracking-tight text-justify">

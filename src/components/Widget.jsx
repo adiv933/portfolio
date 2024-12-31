@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Widget = ({ className }) => {
     const [dateTime, setDateTime] = useState(new Date());
@@ -11,11 +12,14 @@ const Widget = ({ className }) => {
         <div className={`max-w-[22rem] shadow-lg rounded-lg border-[3px] border-black ${className}`}>
             {/* Top Section: Image and Time */}
             <div className="px-4 py-4 flex flex-col items-center">
+                {/* <Link to="https://mac-template.webflow.io/" target="_blank" class="tooltip"> */}
                 <img
-                    src="/pc.png"
+                    src="images/pc.png"
                     alt="pc"
                     className="w-24 h-24 rounded-2xl border-[3px] border-black mb-2 contrast-125 grayscale hover:grayscale-0 hover:contrast-100"
                 />
+                {/* <span class="tooltip-text">design inspiration from</span> */}
+                {/* </Link> */}
                 <div className="text-2xl font-semibold text-gray-700">{dateTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</div>
             </div>
 
@@ -55,7 +59,7 @@ const MusicPlayer = () => {
         <div className="w-full flex items-center py-4 rounded-lg shadow-lg justify-evenly ">
             {/* Song Image */}
             <img
-                src="/flawed_mangoes.jpg"
+                src="images/flawed_mangoes.jpg"
                 alt="flawed_mangoes"
                 className="w-20 h-20 rounded-lg hover:scale-105 border-[3px] border-black"
             />

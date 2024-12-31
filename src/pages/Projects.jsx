@@ -1,4 +1,4 @@
-import MacSVG from "../../public/MacSVG";
+import MacSVG from "../../public/images/MacSVG";
 import WindowCard from "../components/WindowCard";
 
 const Projects = () => {
