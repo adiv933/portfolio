@@ -22,3 +22,13 @@ button {
     background-repeat: repeat;
     background-size: 15px;
 }
+
+.blinking-cursor {
+    animation: blink 1.5s step-end infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}

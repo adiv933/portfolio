@@ -31,8 +31,8 @@ const About = () => {
             >
                 <div className="absolute right-44 top-24">
 
-                    <WindowCard title="/usr/aditya/experience" width="xl">
-                        <div className="flex flex-col h-[36rem]">
+                    <WindowCard title="/usr/aditya/about/experience.txt" width="2xl">
+                        <div className="flex flex-col h-[36rem] tracking-tight">
                             <div className="flex items-center gap-x-6 bg-gray-300 border-b-[3px] border-black pl-4 ">
                                 <span className="hover:font-semibold">File</span>
                                 <span className="hover:font-semibold">View</span>
@@ -83,7 +83,9 @@ const About = () => {
                                 <h4 className="text-xl font-semibold underline mt-8 mb-4">Education</h4>
                                 <ul className="space-y-4 text-md">
                                     <li>
-                                        <strong>Manipal Institute of Technology, Manipal Karnataka</strong><br />B. Tech Information Technology - 2026</li>
+                                        <strong>Manipal Institute of Technology, Manipal Karnataka</strong><br />B. Tech Information Technology - 2026
+                                        <span className="blinking-cursor">|</span>
+                                    </li>
 
                                 </ul>
                             </div>
@@ -98,9 +100,9 @@ const About = () => {
             <Draggable
                 bounds="parent"
             >
-                <div className="absolute left-24 top-48">
-                    <WindowCard title="/usr/aditya/skill" width="lg">
-                        <div className="flex h-full">
+                <div className="absolute left-24 top-48 ">
+                    <WindowCard title="/usr/aditya/about/skills" width="lg">
+                        <div className="flex h-full tracking-tight">
                             <div className="w-1/4 border-r-[3px] border-black p-1 pt-4 bg-gray-100">
                                 <h4 className="text-md font-semibold mb-4 tracking-tight">Quick Access</h4>
                                 <ul className="space-y-2 text-sm">
@@ -115,12 +117,12 @@ const About = () => {
                             <div className="w-3/4 p-4">
                                 <div className="grid grid-cols-4 gap-4">
                                     {skills.map((skill, index) => (
-                                        <div key={index} className="flex flex-col items-center hover:scale-105">
+                                        <div key={index} className="flex flex-col items-center hover:scale-105 ">
                                             <div className="w-16 h-16 bg-gray-200 border-[3px] border-black rounded-lg flex items-center justify-center">
                                                 <img
                                                     src={skill.image}
                                                     alt={skill.name}
-                                                    className="max-w-full max-h-full grayscale contrast-125 "
+                                                    className="max-w-full max-h-full grayscale contrast-125 hover:grayscale-0"
                                                 />
                                             </div>
                                             <p className="text-md font-semibold text-center">{skill.name}</p>
