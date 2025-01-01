@@ -7,9 +7,12 @@ import Contact from "./pages/Contact";
 import NavigationIconTray from "./components/NavigationIconTray";
 import CustomCursor from "./components/CustomCursor";
 import useChangeWallpaper from "./hooks/useChangeWallpaper";
+import { useGSAP } from "@gsap/react";
 
 const App = () => {
   const [wallpaper, setWallpaper] = useChangeWallpaper();
+
+  
 
   return (
     <div

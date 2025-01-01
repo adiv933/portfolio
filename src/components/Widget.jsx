@@ -1,16 +1,29 @@
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-const Widget = ({ className }) => {
+const Widget = () => {
     const [dateTime, setDateTime] = useState(new Date());
 
     useEffect(() => {
         const timer = setInterval(() => setDateTime(new Date()), 60000);
         return () => clearInterval(timer);
     }, []);
+
+    useGSAP(() => {
+        gsap.from(".widget", {
+            x: -200,
+            opacity: 0,
+            delay: 3.7,
+            duration: 2,
+            ease: "power2",
+        });
+    })
+
+
     return (
-        <div className={`max-w-[22rem] shadow-lg rounded-lg border-[3px] border-black ${className}`}>
-            {/* Top Section: Image and Time */}
+        <div className="widget fixed left-8 top-20 max-w-[22rem] shadow-lg rounded-lg border-[3px] border-black bg-white">
             <div className="px-4 py-4 flex flex-col items-center">
                 {/* <Link to="https://mac-template.webflow.io/" target="_blank" class="tooltip"> */}
                 <img
@@ -23,8 +36,7 @@ const Widget = ({ className }) => {
                 <div className="text-2xl font-semibold text-gray-700">{dateTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</div>
             </div>
 
-            {/* Middle Section: Stats */}
-            <div className="px-3 py-4 bg-gray-300 mx-2 rounded-lg border-[3px] border-black">
+            <div className="px-3 py-4 mx-2 rounded-lg border-[3px] border-black bg-gray-200">
                 <div className="flex justify-between items-center gap-x-2 hover:translate-y-[-2px] ">
                     <div className="text-sm text-gray-600 font-semibold ">cpu</div>
                     <div className="h-4 w-52 bg-gray-200 rounded-full border-2 border-black ">
@@ -45,7 +57,6 @@ const Widget = ({ className }) => {
                 </div>
             </div>
 
-            {/* Bottom Section: Music Player UI */}
             <MusicPlayer />
         </div>
     );
@@ -57,21 +68,15 @@ const MusicPlayer = () => {
 
     return (
         <div className="w-full flex items-center py-4 rounded-lg shadow-lg justify-evenly ">
-            {/* Song Image */}
             <img
                 src="images/flawed_mangoes.jpg"
                 alt="flawed_mangoes"
                 className="w-20 h-20 rounded-lg hover:scale-105 border-[3px] border-black"
             />
 
-            {/* Song Info and Controls */}
             <div className="flex flex-col items-start justify-between">
-                {/* Song Title */}
                 <div className="text-lg font-semibold self-center">the beginning</div>
-
-                {/* Media Controls */}
                 <div className="flex items-center space-x-4">
-                    {/* Previous Button */}
                     <button
                         onMouseEnter={() => setIsPrevHovered(true)}
                         onMouseLeave={() => setIsPrevHovered(false)}
@@ -104,7 +109,6 @@ const MusicPlayer = () => {
                         )}
                     </button>
 
-                    {/* Play/Pause Button */}
                     <button className="p-2 hover:scale-110">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -120,7 +124,6 @@ const MusicPlayer = () => {
                         </svg>
                     </button>
 
-                    {/* Next Button */}
                     <button
                         onMouseEnter={() => setIsNextHovered(true)}
                         onMouseLeave={() => setIsNextHovered(false)}

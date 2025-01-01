@@ -1,8 +1,33 @@
+import React, { useEffect } from "react";
 import WindowCard from "../components/WindowCard";
+import { usePreloader } from "../contexts/PreloaderContext";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const Contact = () => {
+
+    const { setLoading } = usePreloader();
+
+    useEffect(() => {
+        setLoading(true);
+        const timer = setTimeout(() => {
+            setLoading(false);
+        }, 3500);
+
+        return () => clearTimeout(timer);
+    }, [setLoading]);
+
+    useGSAP(() => {
+        gsap.from(".contact-card", {
+            opacity: 0,
+            delay: 3.4,
+            duration: 2,
+            ease: "power4.out",
+        });
+    })
+
     return (
-        <div className="min-h-screen flex items-center justify-center">
+        <div className="contact-card min-h-screen flex items-center justify-center">
             <WindowCard title="/usr/aditya/contact">
                 <div className="p-4">
                     <ul className="list-none space-y-4 text-sm">

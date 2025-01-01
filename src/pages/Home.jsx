@@ -3,20 +3,44 @@ import WindowCard from "../components/WindowCard";
 import Widget from "../components/Widget";
 import MacSVG from "../../public/images/MacSVG";
 import useDraggable from "../hooks/useDraggable";
+import { usePreloader } from "../contexts/PreloaderContext";
+import { useEffect } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const Home = () => {
 
     const { isDragging, handleStart, handleStop } = useDraggable();
 
+    const { setLoading } = usePreloader();
+
+    useEffect(() => {
+        setLoading(true);
+        const timer = setTimeout(() => {
+            setLoading(false);
+        }, 3500);
+
+        return () => clearTimeout(timer);
+    }, [setLoading]);
+
+    useGSAP(() => {
+        gsap.from(".info-card", {
+            opacity: 0,
+            delay: 3.4,
+            duration: 2,
+            ease: "power4.out",
+        });
+    })
+
     return (
         <div className="min-h-screen flex items-center justify-evenly">
-            <Widget className="fixed left-8 top-20" />
+            <Widget />
             <Draggable
                 bounds="parent"
                 onStart={handleStart}
                 onStop={handleStop}
             >
-                <div className={`absolute ${isDragging
+                <div className={`info-card absolute ${isDragging
                     ? "cursor-grabbing"
                     : "cursor-grab"
                     }`}>

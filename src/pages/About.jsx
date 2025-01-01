@@ -2,12 +2,16 @@ import Draggable from "react-draggable";
 import WindowCard from "../components/WindowCard";
 import { useEffect, useRef, useState } from "react";
 import useDraggable from "../hooks/useDraggable";
+import { useGSAP } from "@gsap/react";
+import { usePreloader } from "../contexts/PreloaderContext";
+import gsap from "gsap";
 
 const About = () => {
 
     const [showArrow, setShowArrow] = useState(true);
     const scrollableDivRef = useRef(null);
     const { isDragging, handleStart, handleStop } = useDraggable();
+    const { setLoading } = usePreloader();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -29,6 +33,27 @@ const About = () => {
             }
         };
     }, []);
+
+
+    useEffect(() => {
+        setLoading(true);
+        const timer = setTimeout(() => {
+            setLoading(false);
+        }, 3500);
+
+        return () => clearTimeout(timer);
+    }, [setLoading]);
+
+    useGSAP(() => {
+        gsap.from(".about", {
+            y:100,
+            opacity: 0,
+            delay: 3.4,
+            duration: 2,
+            ease: "power4.out",
+            stagger: 0.3
+        });
+    })
 
     const skills = [
         { name: "git", image: "/skills/git.png" },
@@ -58,7 +83,7 @@ const About = () => {
                 onStart={handleStart}
                 onStop={handleStop}
             >
-                <div className={`absolute right-44 top-24 ${isDragging
+                <div className={`about absolute right-44 top-24 ${isDragging
                     ? "cursor-grabbing"
                     : "cursor-grab"
                     }`}>
@@ -125,12 +150,12 @@ const About = () => {
 
                             {/* Down arrow indicator */}
                             {showArrow && (
-                                <div className="absolute bottom-4 left-0 right-0 flex justify-center">
-                                    <div className="animate-bounce">
+                                <div className="absolute bottom-4 left-0 right-0 flex justify-center ">
+                                    <div className="animate-bounce ">
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             className="w-7 h-7 text-black border-[3px] border-black rounded-full"
-                                            fill="none"
+                                            fill="black"
                                             viewBox="0 0 24 24"
                                             stroke="currentColor"
                                         >
@@ -155,8 +180,9 @@ const About = () => {
                 bounds="parent"
                 onStart={handleStart}
                 onStop={handleStop}
+
             >
-                <div className={`absolute left-24 top-48 ${isDragging
+                <div className={`about absolute left-24 top-48 ${isDragging
                     ? "cursor-grabbing"
                     : "cursor-grab"
                     }`}>
