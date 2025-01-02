@@ -1,13 +1,13 @@
 import { useState } from "react";
 
 const wallpapers = [
-    "bg-gray-200",
-    "bg-red-300",
-    "bg-amber-300",
-    "bg-lime-200",
-    "bg-teal-300",
-    "bg-orange-300",
-    "bg-purple-300",
+    "bg-[url('/walls/wall0.jpg')]",
+    "bg-[url('/walls/wall1.jpg')]",
+    "bg-[url('/walls/wall2.jpg')]",
+    "bg-[url('/walls/wall3.jpg')]",
+    "bg-[url('/walls/wall4.jpg')]",
+    "bg-[url('/walls/wall5.jpg')]",
+    "bg-[url('/walls/wall6.jpg')]",
 ];
 
 

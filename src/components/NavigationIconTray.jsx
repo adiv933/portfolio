@@ -1,6 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { NavLink } from "react-router-dom";
+import { navLinks } from "../data";
 
 export default function NavigationIconTray({ setWallpaper, className, currentPath }) {
     const iconClass = "cursor-pointer";
@@ -14,29 +15,6 @@ export default function NavigationIconTray({ setWallpaper, className, currentPat
             ease: "power4",
         });
     }, [currentPath])
-
-    const navLinks = [
-        {
-            name: "home",
-            route: "/",
-            icon: "images/home.png",
-        },
-        {
-            name: "projects",
-            route: "/projects",
-            icon: "images/projects.png",
-        },
-        {
-            name: "about",
-            route: "/about",
-            icon: "images/about.png",
-        },
-        {
-            name: "contact",
-            route: "/contact",
-            icon: "images/contact.png",
-        },
-    ];
 
     return (
         <div className={`${className} tray fixed right-6 top-24 h-[85%] w-20 flex flex-col justify-between items-center text-black`}>

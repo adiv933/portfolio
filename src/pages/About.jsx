@@ -5,6 +5,7 @@ import useDraggable from "../hooks/useDraggable";
 import { useGSAP } from "@gsap/react";
 import { usePreloader } from "../contexts/PreloaderContext";
 import gsap from "gsap";
+import { skills } from "../data";
 
 const About = () => {
 
@@ -46,7 +47,7 @@ const About = () => {
 
     useGSAP(() => {
         gsap.from(".about", {
-            y:100,
+            y: 100,
             opacity: 0,
             delay: 3.4,
             duration: 2,
@@ -54,27 +55,6 @@ const About = () => {
             stagger: 0.3
         });
     })
-
-    const skills = [
-        { name: "git", image: "/skills/git.png" },
-        { name: "github", image: "/skills/github.png" },
-        { name: "mongodb", image: "/skills/mongodb.png" },
-        { name: "sql", image: "/skills/sql.png" },
-        { name: "express", image: "/skills/express.png" },
-        { name: "nodejs", image: "/skills/nodejs.png" },
-        { name: "reactjs", image: "/skills/reactjs.png" },
-        { name: "nextjs", image: "/skills/nextjs.png" },
-        { name: "html", image: "/skills/html.png" },
-        { name: "css", image: "/skills/css.png" },
-        { name: "ejs", image: "/skills/ejs.png" },
-        { name: "tailwind", image: "/skills/tailwind.png" },
-        { name: "bootstrap", image: "/skills/bootstrap.png" },
-        { name: "java", image: "/skills/java.png" },
-        { name: "c++", image: "/skills/cpp.png" },
-        { name: "c", image: "/skills/c.png" },
-        { name: "javascript", image: "/skills/js.png" },
-        { name: "typescript", image: "/skills/ts.png" },
-    ];
 
     return (
         <div className="min-h-screen">
