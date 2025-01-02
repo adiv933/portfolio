@@ -2,7 +2,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { NavLink } from "react-router-dom";
 
-export default function NavigationIconTray({ setWallpaper }) {
+export default function NavigationIconTray({ setWallpaper, className, currentPath }) {
     const iconClass = "cursor-pointer";
 
     useGSAP(() => {
@@ -13,7 +13,7 @@ export default function NavigationIconTray({ setWallpaper }) {
             duration: 2,
             ease: "power4",
         });
-    })
+    }, [currentPath])
 
     const navLinks = [
         {
@@ -39,8 +39,7 @@ export default function NavigationIconTray({ setWallpaper }) {
     ];
 
     return (
-        <div className="tray fixed right-6 top-24 h-[85%] w-20 flex flex-col justify-between items-center text-black ">
-            {/* Top Icons */}
+        <div className={`${className} tray fixed right-6 top-24 h-[85%] w-20 flex flex-col justify-between items-center text-black`}>
             <div className="space-y-4 flex flex-col">
                 {navLinks.map((link) => (
                     <NavLink
@@ -63,7 +62,6 @@ export default function NavigationIconTray({ setWallpaper }) {
                 ))}
             </div>
 
-            {/* Bottom Icon */}
             <div>
                 <button
                     className={iconClass}

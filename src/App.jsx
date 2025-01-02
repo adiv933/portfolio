@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
@@ -7,18 +7,16 @@ import Contact from "./pages/Contact";
 import NavigationIconTray from "./components/NavigationIconTray";
 import CustomCursor from "./components/CustomCursor";
 import useChangeWallpaper from "./hooks/useChangeWallpaper";
-import { useGSAP } from "@gsap/react";
 
 const App = () => {
   const [wallpaper, setWallpaper] = useChangeWallpaper();
-
-  
+  const location = useLocation();
 
   return (
     <div
       className={`min-h-screen w-screen transition-colors duration-300 ${wallpaper}`}
     >
-      <Navbar />
+      <Navbar currentPath={location.pathname} />
       <div>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -27,7 +25,7 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
-      <NavigationIconTray setWallpaper={setWallpaper} />
+      <NavigationIconTray setWallpaper={setWallpaper} currentPath={location.pathname} />
       {/* <CustomCursor /> */}
     </div >
   );
