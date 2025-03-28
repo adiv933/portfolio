@@ -52,7 +52,8 @@ const Home = () => {
                             <br />
                             A full-stack developer and tech enthusiast. Let's collaborate and bring ideas to life!
                         </p>
-                        <a href="/resume_aditya_verma.pdf" download="resume_aditya_verma.pdf">
+                        <a target="_blank"
+                            href="https://onedrive.live.com/?redeem=aHR0cHM6Ly8xZHJ2Lm1zL2IvYy80YWQxMDU5MGFiMTU3OTExL0VRSllSSFB3OVFaSmpaQXpsQ25IcWo4QlJQamUwWEQ5ZkZ5U1FfZFJCd1dzSFE&cid=4AD10590AB157911&id=4AD10590AB157911%21s73445802f5f049068d90339429c7aa3f&parId=4AD10590AB157911%21sbe4899d005254673b6de206048207329&o=OneUp" download="resume_aditya_verma.pdf">
                             <button className="custom-box-shadow border-4 border-black w-full p-2 mt-4 hover:bg-black hover:text-white font-bold flex justify-center items-center gap-x-2">
                                 click to download resume
                                 <svg
