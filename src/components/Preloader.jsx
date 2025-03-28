@@ -1,37 +1,3 @@
-// import gsap from "gsap";
-// import { useEffect } from "react";
-// import { usePreloader } from "../contexts/PreloaderContext";
-// import "../preloader.css";
-
-// const Preloader = () => {
-//     const { loading } = usePreloader();
-
-//     useEffect(() => {
-//         if (!loading) return;
-
-//         const animation = gsap.to(".preloader", {
-//             y: "-100%",
-//             duration: 1,
-//             delay: 3,
-//             ease: "elastic.out(0.1, 0.2)",
-//         })
-
-//         return () => {
-//             animation.kill();
-//         };
-//     }, [loading]);
-
-//     if (!loading) return null;
-
-//     return (
-//         <div className="preloader">
-//             <div className="loader"></div>
-//         </div>
-//     );
-// };
-
-// export default Preloader;
-
 import gsap from "gsap";
 import { useEffect } from "react";
 import { usePreloader } from "../contexts/PreloaderContext";

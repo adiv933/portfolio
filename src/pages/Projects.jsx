@@ -6,7 +6,6 @@ import { usePreloader } from "../contexts/PreloaderContext";
 import { projects } from "../data";
 
 const Projects = () => {
-
     const { setLoading } = usePreloader();
 
     useEffect(() => {
@@ -27,9 +26,9 @@ const Projects = () => {
             delay: 3.4,
             duration: 2,
             ease: "power4.out",
-            stagger: 0.3
+            stagger: 0.3,
         });
-    })
+    });
 
     useEffect(() => {
         setLoading(true);
@@ -40,45 +39,71 @@ const Projects = () => {
         return () => clearTimeout(timer);
     }, [setLoading]);
 
-
     return (
         <div className="min-h-screen border border-transparent">
-            <div className="project-heading sticky top-32 ml-28 header z-10 ">
-                <h1 className=" text-[4rem] font-bold mb-2 tracking-tighter">Projects</h1>
+            <div className="project-heading sticky top-32 ml-28 header z-10">
+                <h1 className="text-[4rem] font-bold mb-2 tracking-tighter">
+                    Projects
+                </h1>
                 <p className="text-xl">beep beep boop bop</p>
             </div>
-            <div className="project-container h-[85vh] mt-48 ml-8 mr-36 mb-4 p-8 border-[3px] border-black rounded-lg panel relative z-20 flex items-center gap-x-12 overflow-x-auto   custom-box-shadow">
-
+            <div className="project-container h-[85vh] mt-48 ml-8 mr-36 mb-4 p-8 border-[3px] border-black rounded-lg panel relative z-20 flex items-center gap-x-12 overflow-x-auto custom-box-shadow">
                 {projects.map((project, index) => (
-                    <WindowCard title={`project#${index + 1}`} key={index} width="2xl">
-                        <div className="w-fit">
+                    <WindowCard
+                        title={`project#${index + 1}`}
+                        key={index}
+                        width="2xl"
+                        className="w-[360px] h-[450px] flex flex-col justify-between" 
+                    >
+                        <div className="w-full flex flex-col h-full">
+                            {/* Project Image */}
                             <img
                                 src={project.image}
                                 alt={project.name}
-                                className="w-full h-48 object-cover"
+                                className="w-full h-48 object-cover rounded-t-lg grayscale hover:grayscale-0 "
                             />
-                            <div className="w-full p-4">
-                                <h3 className="text-lg font-bold text-gray-800 mb-2">{project.name}</h3>
-                                <p className="text-sm text-gray-600">{project.desc}</p>
+                            <div className="w-full p-4 flex flex-col flex-grow">
+                                {/* Project Name */}
+                                <h3 className="text-lg font-bold text-gray-800 mb-2">
+                                    {project.name}
+                                </h3>
+                                {/* Project Description */}
+                                <p className="text-sm text-gray-600 mb-4">
+                                    {project.desc}
+                                </p>
+                                {/* Project Skills */}
+                                <div className="flex flex-wrap gap-2 mb-4">
+                                    {project.skills.map((skill, idx) => (
+                                        <span
+                                            key={idx}
+                                            className="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded-full border border-black"
+                                        >
+                                            {skill}
+                                        </span>
+                                    ))}
+                                </div>
                             </div>
-                            <div className="flex gap-x-4 items-center justify-around">
-                                {project.liveLink && <button className="custom-box-shadow border-4 border-black w-72 p-2 mt-4 hover:bg-black hover:text-white font-bold flex justify-center items-center gap-x-2">
-                                    live link
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24"
-                                        fill="currentColor"
-                                        className="size-5"
-                                    >
-                                        <path
-                                            fillRule="evenodd"
-                                            d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z"
-                                            clipRule="evenodd"
-                                        />
-                                    </svg>
-                                </button>}
-                                <button className="custom-box-shadow border-4 border-black w-full p-2 mt-4 hover:bg-black hover:text-white font-bold flex justify-center items-center gap-x-2">
-                                    code
+                            {/* Buttons */}
+                            <div className="flex gap-x-4 items-center justify-around mb-4 px-4">
+                                {project.liveLink && (
+                                    <button className="custom-box-shadow border-4 border-black w-36 h-8 p-1 hover:bg-black hover:text-white font-bold flex justify-center items-center gap-x-1">
+                                        Live Link
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24"
+                                            fill="currentColor"
+                                            className="size-5"
+                                        >
+                                            <path
+                                                fillRule="evenodd"
+                                                d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z"
+                                                clipRule="evenodd"
+                                            />
+                                        </svg>
+                                    </button>
+                                )}
+                                <button className="custom-box-shadow border-4 border-black w-32 h-8 p-2 hover:bg-black hover:text-white font-bold flex justify-center items-center gap-x-2">
+                                    Code
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         viewBox="0 0 24 24"
@@ -95,7 +120,6 @@ const Projects = () => {
                             </div>
                         </div>
                     </WindowCard>
-
                 ))}
             </div>
         </div>

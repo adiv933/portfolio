@@ -63,7 +63,7 @@ const About = () => {
                 onStart={handleStart}
                 onStop={handleStop}
             >
-                <div className={`about absolute right-44 top-24 ${isDragging
+                <div className={`about absolute right-44 top-28 ${isDragging
                     ? "cursor-grabbing"
                     : "cursor-grab"
                     }`}>
@@ -100,6 +100,10 @@ const About = () => {
                                         <strong>Freelance Fullstack Developer</strong> (May 2024 – Present)
                                         <br />
                                         Working with multiple clients under tight deadlines
+                                    </li>
+                                    <li>
+                                        <strong>Student Council Web Dev Lead</strong> (Dec 2024 – Present)
+                                        <br />
                                     </li>
                                 </ul>
 
@@ -162,12 +166,12 @@ const About = () => {
                 onStop={handleStop}
 
             >
-                <div className={`about absolute left-24 top-48 ${isDragging
+                <div className={`about absolute left-24 top-20 ${isDragging
                     ? "cursor-grabbing"
                     : "cursor-grab"
                     }`}>
                     <WindowCard title="/usr/aditya/about/skills" width="lg">
-                        <div className="flex h-full tracking-tight">
+                        <div className="flex h-full tracking-tight ">
                             <div className="w-1/4 border-r-[3px] border-black p-1 pt-4 bg-gray-100">
                                 <h4 className="text-md font-semibold mb-4  tracking-tight">quick access</h4>
                                 <ul className="space-y-2 text-sm">
@@ -196,7 +200,6 @@ const About = () => {
                                 </div>
                             </div>
                         </div>
-
                     </WindowCard>
                 </div>
 
