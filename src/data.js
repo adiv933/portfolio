@@ -52,7 +52,7 @@ export const projects = [
     {
         name: "CoDocs",
         desc: "A real-time collaborative document editor with WebSocket-based synchronization.",
-        image: "/projects/codocs",
+        image: "projects/codocs.png",
         repoLink: "https://github.com/adiv933/CoDocs",
         liveLink: "https://co-docs-v1.vercel.app/",
         skills: ["React", "Typescript", "Node.js", "MongoDB", "Socket.IO"],
@@ -60,7 +60,7 @@ export const projects = [
     {
         name: "FoodOS",
         desc: "A full-stack food ordering platform built with React, Node.js, and SQL.",
-        image: "/projects/foodos",
+        image: "projects/foodos.png",
         repoLink: "https://github.com/adiv933/FoodOS",
         liveLink: "https://food-os.vercel.app/login",
         skills: ["React", "Node.js", "Express", "PostgreSQL", "Tailwind CSS", "Express"],
@@ -68,7 +68,7 @@ export const projects = [
     {
         name: "TopFlow",
         desc: "A modern team collaboration tool featuring task management and real-time updates.",
-        image: "/projects/topflow",
+        image: "projects/topflow.png",
         repoLink: "https://github.com/adiv933/TopFlow",
         liveLink: "https://top-flow.vercel.app",
         skills: ["React", "Node.js", "MongoDB", "Socket.IO", "Tailwind CSS", "Express"],
