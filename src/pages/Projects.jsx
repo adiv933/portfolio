@@ -3,7 +3,7 @@ import gsap from "gsap";
 import WindowCard from "../components/WindowCard";
 import { useEffect } from "react";
 import { usePreloader } from "../contexts/PreloaderContext";
-import { projects } from "../data";
+import { colors, projects } from "../data";
 import { Link } from "react-router-dom";
 
 const Projects = () => {
@@ -57,7 +57,7 @@ const Projects = () => {
                         className="w-[360px] h-[450px] flex flex-col justify-between"
                     >
                         <div className="w-full flex flex-col h-full overflow-hidden">
-                            <div className="relative w-full h-48 overflow-hidden group">
+                            <div className="relative w-full h-48 overflow-hidden group border-black border-b-[3px]">
                                 <img
                                     src={project.image}
                                     alt={project.name}
@@ -80,7 +80,7 @@ const Projects = () => {
                                     {project.skills.map((skill, idx) => (
                                         <span
                                             key={idx}
-                                            className="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded-full border border-black"
+                                            className={`text-xs bg-gray-200 ${colors[Math.floor(Math.random() * colors.length)]} text-black px-2 py-1 rounded-full border border-black`}
                                         >
                                             {skill}
                                         </span>

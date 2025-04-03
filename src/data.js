@@ -83,3 +83,16 @@ export const projects = [
     },
 ];
 
+export const colors = [
+    "hover:bg-red-200", "hover:bg-red-300", "hover:bg-red-400",
+    "hover:bg-blue-200", "hover:bg-blue-300", "hover:bg-blue-400",
+    "hover:bg-green-200", "hover:bg-green-300", "hover:bg-green-400",
+    "hover:bg-yellow-200", "hover:bg-yellow-300", "hover:bg-yellow-400",
+    "hover:bg-purple-200", "hover:bg-purple-300", "hover:bg-purple-400",
+    "hover:bg-pink-200", "hover:bg-pink-300", "hover:bg-pink-400",
+    "hover:bg-indigo-200", "hover:bg-indigo-300", "hover:bg-indigo-400",
+    "hover:bg-teal-200", "hover:bg-teal-300", "hover:bg-teal-400",
+    "hover:bg-orange-200", "hover:bg-orange-300", "hover:bg-orange-400",
+    "hover:bg-cyan-200", "hover:bg-cyan-300", "hover:bg-cyan-400",
+    "hover:bg-lime-200", "hover:bg-lime-300", "hover:bg-lime-400",
+];

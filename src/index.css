@@ -13,8 +13,20 @@ button {
     cursor: none;
 } */
 
-.custom-box-shadow {
+/* .custom-box-shadow {
     box-shadow: 6px 6px 0px 0px black;
+} */
+
+.custom-box-shadow {
+    filter: drop-shadow(7px 7px 0 rgb(0 0 0 / 1));
+    background-color: #fff;
+    transition: filter;
+    transition-duration: 0.5s;
+    animation: ease-in-out;
+}
+
+.custom-box-shadow:hover {
+    filter: drop-shadow(4px 4px 0 rgb(0 0 0 / 1));
 }
 
 .panel {
