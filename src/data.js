@@ -46,6 +46,7 @@ export const skills = [
     { name: "aws", image: "/skills/aws.png" },
     { name: "nginx", image: "/skills/nginx.png" },
     { name: "socket.io", image: "/skills/socketio.png" },
+    { name: "hono", image: "/skills/hono.jpg" },
 ];
 
 export const projects = [
@@ -56,6 +57,14 @@ export const projects = [
         repoLink: "https://github.com/adiv933/CoDocs",
         liveLink: "https://co-docs-v1.vercel.app/",
         skills: ["React", "Typescript", "Node.js", "MongoDB", "Socket.IO"],
+    },
+    {
+        name: "Pencraft",
+        desc: "A minimal, elegant blogging platform with authentication, post creation/editing, and public viewing.",
+        image: "projects/pencraft.png",
+        repoLink: "https://github.com/adiv933/Pencraft",
+        liveLink: "https://pencraft-virid.vercel.app/",
+        skills: ["React", "Tailwind CSS", "Hono", "Prisma", "PostgreSQL"]
     },
     {
         name: "FoodOS",
