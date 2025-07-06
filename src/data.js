@@ -51,6 +51,14 @@ export const skills = [
 
 export const projects = [
     {
+        name: "AskYourPDF",
+        desc: "A web app that lets users chat with their PDF documents using natural language.",
+        image: "projects/ask-your-pdf.png",
+        repoLink: "https://github.com/adiv933/ask-your-pdf",
+        liveLink: "https://ask-your-pdf.vercel.app/",
+        skills: ["Next.js", "Express", "BullMQ", "Multer", "LangChain", "OpenAI", "Groq", "Qdrant", "TypeScript"]
+    },
+    {
         name: "CoDocs",
         desc: "A real-time collaborative document editor with WebSocket-based synchronization.",
         image: "projects/codocs.png",
