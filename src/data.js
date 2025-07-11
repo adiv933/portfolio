@@ -55,8 +55,8 @@ export const projects = [
         desc: "A web app that lets users chat with their PDF documents using natural language.",
         image: "projects/ask-your-pdf.png",
         repoLink: "https://github.com/adiv933/ask-your-pdf",
-        liveLink: "https://ask-your-pdf.vercel.app/",
-        skills: ["Next.js", "Express", "BullMQ", "Multer", "LangChain", "OpenAI", "Groq", "Qdrant", "TypeScript"]
+        liveLink: "https://ask-your-pdf-lemon.vercel.app/",
+        skills: ["Next.js", "Express", "BullMQ", "Multer", "LangChain", "Ollama", "Llama3", "Qdrant", "Redis", "Embeddings", "Docker", "TypeScript"]
     },
     {
         name: "CoDocs",
