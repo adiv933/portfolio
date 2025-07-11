@@ -72,7 +72,7 @@ export const projects = [
         image: "projects/pencraft.png",
         repoLink: "https://github.com/adiv933/Pencraft",
         liveLink: "https://pencraft-virid.vercel.app/",
-        skills: ["React", "Tailwind CSS", "Hono", "Prisma", "PostgreSQL"]
+        skills: ["React", "Tailwind CSS", "Cloudflare Workers", "Hono", "Prisma", "PostgreSQL"]
     },
     {
         name: "FoodOS",
@@ -86,7 +86,7 @@ export const projects = [
         name: "TopFlow",
         desc: "A modern team collaboration tool featuring task management and real-time updates.",
         image: "projects/topflow.png",
-        repoLink: "https://github.com/adiv933/TopFlow",
+        repoLink: "https://github.com/satan-pro/TopFlow",
         liveLink: "https://top-flow.vercel.app",
         skills: ["React", "Node.js", "MongoDB", "Socket.IO", "Tailwind CSS", "Express"],
     },
