@@ -184,7 +184,7 @@ const About = () => {
                             </div>
 
                             <div className="w-3/4 p-4">
-                                <div className="grid grid-cols-4 gap-4">
+                                <div className="grid grid-cols-5 gap-4">
                                     {skills.map((skill, index) => (
                                         <div key={index} className="flex flex-col items-center hover:scale-105 ">
                                             <div className="w-16 h-16 bg-gray-200 border-[3px] border-black rounded-lg flex items-center justify-center">

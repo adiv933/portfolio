@@ -24,7 +24,7 @@ const Projects = () => {
 
         gsap.to(track, {
             x: () => `-${totalScroll}`,
-            ease: "power3.inOut",
+            ease: "power2.inOut",
             scrollTrigger: {
                 trigger: container,
                 start: "top 12%",
@@ -76,7 +76,6 @@ const Projects = () => {
                         <WindowCard
                             title={`project#${index + 1}`}
                             key={index}
-                            width="2xl"
                             className="w-[360px] h-[450px] flex flex-col justify-between"
                         >
                             <div className="w-full flex flex-col h-full overflow-hidden">
@@ -115,7 +114,7 @@ const Projects = () => {
                                         to={project.liveLink}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="custom-box-shadow border-4 border-black w-36 h-8 p-1 hover:bg-black hover:text-white font-bold flex justify-center items-center gap-x-1"
+                                        className="animated-btn font-bold p-2 flex justify-center items-center gap-x-2"
                                     >
                                         Live Link
                                         <svg
@@ -136,7 +135,7 @@ const Projects = () => {
                                         to={project.repoLink}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="custom-box-shadow border-4 border-black w-32 h-8 p-2 hover:bg-black hover:text-white font-bold flex justify-center items-center gap-x-2"
+                                        className="animated-btn font-bold p-2 flex justify-center items-center gap-x-2"
                                     >
                                         Code
                                         <svg

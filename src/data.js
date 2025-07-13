@@ -91,11 +91,11 @@ export const projects = [
         skills: ["React", "Node.js", "MongoDB", "Socket.IO", "Tailwind CSS", "Express"],
     },
     {
-        name: "Lost&Found",
-        desc: "An Android app designed to help users find and track lost items efficiently.",
+        name: "Akio",
+        desc: "An Android app designed to help users find and track lost items efficiently around campus.",
         image: "https://via.placeholder.com/300x200?text=Lost%26Found",
-        repoLink: "https://github.com/adiv933/LostAndFound",
-        liveLink: "https://play.google.com/store/apps/details?id=com.aditya.lostandfound",
+        repoLink: "https://github.com/adiv933/Akio",
+        liveLink: "https://play.google.com/store/apps/details?id=com.aditya.akio",
         skills: ["Java", "Android Studio", "Firebase", "Google Maps API"],
     },
 ];
