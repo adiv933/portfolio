@@ -53,7 +53,7 @@ const Contact = () => {
                                 className="w-8 h-8"
                             />
                             <a
-                                href="https://www.linkedin.com/in/adiver"
+                                href="https://www.linkedin.com/in/adiv933"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="underline text-lg"
