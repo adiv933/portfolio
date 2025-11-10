@@ -53,7 +53,7 @@ const Home = () => {
                             A full-stack developer and tech enthusiast. Let's collaborate and bring ideas to life!
                         </p>
                         <a target="_blank"
-                            href="https://1drv.ms/b/c/4ad10590ab157911/EcaxcL6U6WVLqpPtih9cDeMBQy4w0mIP6SsLhWvrBKpzaQ" download="resume_aditya_verma.pdf">
+                            href="https://1drv.ms/b/c/4ad10590ab157911/EavOV0uXZb5Gg-hVCx7Do7cB-zSZYsKOZZgxzfidlf3-Lg?e=2lTBMg" download="resume_aditya_verma.pdf">
                             <button className="animated-btn w-full mt-4 p-4 font-bold flex justify-center items-center gap-x-2">
                                 click to download resume
                                 <svg
