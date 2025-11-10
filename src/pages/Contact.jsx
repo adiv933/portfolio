@@ -38,12 +38,12 @@ const Contact = () => {
                                 className="w-8 h-8"
                             />
                             <a
-                                href="mailto:adityav090304@gmail.com"
+                                href="mailto:adiv933.dev+portfolio@gmail.com"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="underline text-lg"
                             >
-                                mail: adityav090304@gmail.com
+                                mail: adiv933.dev@gmail.com
                             </a>
                         </li>
                         <li className="flex items-center gap-4 contrast-125 grayscale hover:grayscale-0 hover:contrast-100 hover:translate-y-[-2px]">
@@ -58,7 +58,7 @@ const Contact = () => {
                                 rel="noopener noreferrer"
                                 className="underline text-lg"
                             >
-                                linkedin: linkedin.com/in/adiver
+                                linkedin: linkedin.com/in/adiv933
                             </a>
                         </li>
                         <li className="flex items-center gap-4 contrast-125 grayscale hover:grayscale-0 hover:contrast-100 hover:translate-y-[-2px]">
